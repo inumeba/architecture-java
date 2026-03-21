@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    POM.XML — Configuration Maven du projet MVC Spring Boot + Hibernate
+
+    Maven gère :
+    1. Les DÉPENDANCES (Spring Boot, Hibernate, H2...)
+    2. La COMPILATION (javac)
+    3. Le PACKAGING (créer un JAR exécutable)
+    4. Les TESTS (JUnit, Mockito...)
+
+    Spring Boot Starter Parent :
+    → Fournit des versions compatibles de toutes les dépendances
+    → Évite les conflits de versions (dependency hell)
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- PARENT Spring Boot : hérite de la config par défaut -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+        <relativePath/>
+    </parent>
+
+    <!-- IDENTITÉ du projet -->
+    <groupId>com.exemple</groupId>
+    <artifactId>mvc-springboot</artifactId>
+    <version>1.0.0</version>
+    <name>MVC Spring Boot + Hibernate</name>
+    <description>Exemple d'architecture MVC avec Spring Boot et Hibernate (JPA)</description>
+
+    <!-- VERSION DE JAVA -->
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+        <!--
+            SPRING BOOT STARTER WEB
+            → Inclut : Spring MVC, Tomcat embarqué, Jackson (JSON)
+            → C'est tout ce qu'il faut pour créer une API REST
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--
+            SPRING BOOT STARTER DATA JPA
+            → Inclut : Hibernate (ORM), Spring Data JPA, JDBC
+            → Hibernate est l'implémentation de la spécification JPA
+            → Spring Data JPA génère automatiquement les requêtes SQL
+              à partir des noms de méthodes du Repository
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!--
+            SPRING BOOT STARTER VALIDATION
+            → Inclut : Jakarta Bean Validation (Hibernate Validator)
+            → Permet d'utiliser @NotBlank, @Min, @Max, @Email...
+            → Validation automatique dans les contrôleurs avec @Valid
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!--
+            H2 DATABASE (base en mémoire pour le développement)
+            → Pas besoin d'installer PostgreSQL/MySQL pour tester
+            → Les données sont perdues à chaque redémarrage
+            → En production, on remplacera par PostgreSQL
+        -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--
+            SPRING BOOT STARTER TEST (pour les tests unitaires)
+            → Inclut : JUnit 5, Mockito, AssertJ, MockMvc
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--
+                PLUGIN SPRING BOOT MAVEN
+                → Crée un JAR exécutable avec Tomcat embarqué
+                → Lancement : java -jar target/mvc-springboot-1.0.0.jar
+            -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
