@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Erreur d'Éligibilité</title>
+</head>
+<body>
+    <h1 style="color: red;">Non Éligible</h1>
+    <p th:text="${erreurMessage}"></p>
+    <a href="javascript:history.back()">Retour</a>
+</body>
+</html>

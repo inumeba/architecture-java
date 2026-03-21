@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contractualisation TPE Standard</title>
+</head>
+<body>
+    <h1>Souscription Offre TPE Standard</h1>
+    
+    <div th:if="${erreurMessage}" style="color: red;">
+        <p th:text="${erreurMessage}"></p>
+    </div>
+
+    <div>
+        <h2>Informations Client</h2>
+        <p>SIREN: <span th:text="${client.siren}"></span></p>
+        <p>Raison Sociale: <span th:text="${client.raisonSociale}"></span></p>
+    </div>
+
+    <div>
+        <h2>Offre Proposée</h2>
+        <p>Nom: <span th:text="${offre.nomCommercial}"></span></p>
+        <p>Frais: <span th:text="${offre.fraisMiseEnService}"></span> €</p>
+        <p>Commission: <span th:text="${offre.tauxCommissionParTransaction}"></span> %</p>
+    </div>
+
+    <form th:action="@{/agence/contractualisation/tpe/standard/souscrire}" method="post">
+        <input type="hidden" name="siren" th:value="${formulaire.siren}" />
+        <input type="hidden" name="referenceOffre" th:value="${formulaire.referenceOffre}" />
+        
+        <label for="matriculeConseiller">Matricule Conseiller:</label>
+        <input type="text" id="matriculeConseiller" name="matriculeConseiller" required />
+        
+        <button type="submit">Valider le contrat</button>
+    </form>
+</body>
+</html>
