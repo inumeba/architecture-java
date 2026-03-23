@@ -34,7 +34,7 @@ pipeline {
                 echo 'Compilation du projet avec Maven...'
                 // On utilise 'withMaven' pour charger la conf globale (si configuré avec le plugin)
                 // Ou simplement appeler l'exécutable local
-                sh 'devops/mvnw clean package -DskipTests=false'
+                sh 'cd devops && ./mvnw clean package -DskipTests=false'
             }
             post {
                 always {
@@ -53,7 +53,7 @@ pipeline {
                 // 'SonarQube' doit correspondre au nom du serveur configuré dans Jenkins
                 withSonarQubeEnv('SonarQube') {
                     // Le plugin Maven pour Sonar envoie l'analyse au serveur
-                    sh 'devops/mvnw sonar:sonar'
+                    sh 'cd devops && ./mvnw sonar:sonar'
                 }
             }
         }
