@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  # ========================================================
+  # JENKINS - Le cerveau du CI/CD
+  # ========================================================
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: devops-jenkins
+    user: root # Nécessaire pour pouvoir utiliser Docker à l'intérieur de Jenkins
+    ports:
+      - "8080:8080" # Interface Web de Jenkins (http://localhost:8080)
+      - "50000:50000" # Port pour les agents esclaves (optionnel)
+    volumes:
+      - jenkins_data:/var/jenkins_home
+      # Permet à Jenkins d'utiliser le démon Docker de l'ordinateur hôte
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - cicd_network
+    environment:
+      - JAVA_OPTS="-Djenkins.install.runSetupWizard=false" # Gagne du temps sur les setups de test
+
+  # ========================================================
+  # SONARQUBE - L'analyseur de qualité de code
+  # ========================================================
+  sonarqube:
+    image: sonarqube:lts-community
+    container_name: devops-sonarqube
+    ports:
+      - "9000:9000" # Interface Web de SonarQube (http://localhost:9000)
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+    networks:
+      - cicd_network
+    depends_on:
+      - db_sonar
+
+  # ========================================================
+  # BASE DE DONNÉES (Pour SonarQube)
+  # ========================================================
+  db_sonar:
+    image: postgres:15
+    container_name: devops-postgres
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+      - POSTGRES_DB=sonarqube
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - cicd_network
+
+volumes:
+  jenkins_data:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  postgres_data:
+
+networks:
+  cicd_network:
+    driver: bridge

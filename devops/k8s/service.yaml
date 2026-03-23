@@ -1,0 +1,28 @@
+# =========================================================================
+# KUBERNETES : SERVICE
+# Rôle : Exposer le Déploiement (qui gère plusieurs Pods éphémères) via une 
+# adresse réseau unique et un load balancer.
+# =========================================================================
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-service   # Le nom interne (DNS) dans le cluster, ex: http://spring-boot-service
+  labels:
+    app: spring-boot-app
+spec:
+  # Type de service.
+  # - ClusterIP : Accessible uniquement dans le cluster (par défaut)
+  # - NodePort : Accessible de l'extérieur via l'IP d'un nœud
+  # - LoadBalancer : Crée un LoadBalancer dans le Cloud (AWS, GCP, Azure) pour un accès public direct
+  type: LoadBalancer
+  
+  # Le "selector" permet au service de savoir vers quels Pods il doit rediriger le trafic
+  # Il fait le lien avec l'étiquette 'app: spring-boot-app' définie dans le deployment.yaml
+  selector:
+    app: spring-boot-app
+    
+  ports:
+    - protocol: TCP
+      port: 80            # Le port exposé vers l'extérieur (ex: http://ip-load-balancer:80)
+      targetPort: 8080    # Le port réel du conteneur Spring Boot où le trafic sera envoyé

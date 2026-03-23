@@ -1,0 +1,64 @@
+# =========================================================================
+# KUBERNETES : DEPLOYMENT
+# Rôle : S'assurer que le nombre désiré d'instances (Pods) de notre application
+# tourne en permanence. Il gère aussi les mises à jour sans coupure (Rolling Update).
+# =========================================================================
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-app       # Nom du déploiement dans le cluster
+  labels:                     # Étiquettes pour identifier l'application
+    app: spring-boot-app
+spec:
+  replicas: 2                 # On demande à Kubernetes d'avoir TOUJOURS 2 copies (Pods) en fonctionnement (Haute disponibilité)
+  
+  selector:
+    matchLabels:              # Le déploiement s'applique à tous les pods ayant l'étiquette 'app: spring-boot-app'
+      app: spring-boot-app
+      
+  # Définition des Pods qui seront créés
+  template:
+    metadata:
+      labels:
+        app: spring-boot-app  # Étiquette appliquée à chaque Pod créé
+    spec:
+      containers:
+      - name: mon-app-springboot
+        # L'image Docker que nous avons poussée lors du pipeline Jenkins
+        # 'APP_VERSION_TAG' sera remplacé dynamiquement par Jenkins (la commande 'sed' du Jenkinsfile)
+        image: mon-entreprise/mon-app-springboot:APP_VERSION_TAG
+        
+        # Le port sur lequel le conteneur écoute (défini dans le Dockerfile)
+        ports:
+        - containerPort: 8080
+        
+        # -----------------------------------------------------------------
+        # GESTION DES RESSOURCES (Crucial en production)
+        # -----------------------------------------------------------------
+        resources:
+          requests: # Ce dont le conteneur a au minimum besoin pour démarrer
+            memory: "256Mi"
+            cpu: "200m"
+          limits:   # La limite maximale autorisée (évite qu'un conteneur fasse planter le serveur entier)
+            memory: "512Mi"
+            cpu: "500m"
+
+        # -----------------------------------------------------------------
+        # SONDES DE SANTÉ (Probes)
+        # -----------------------------------------------------------------
+        # Liveness : Est-ce que l'application est en vie ? (Si non, Kubernetes la redémarre)
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness  # Nécéssite l'ajout de Spring Boot Actuator au projet
+            port: 8080
+          initialDelaySeconds: 30            # On attend 30s avant le premier check (Spring peut être long à démarrer)
+          periodSeconds: 10
+          
+        # Readiness : Est-ce que l'application est prête à recevoir du trafic web ?
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8080
+          initialDelaySeconds: 20
+          periodSeconds: 5
