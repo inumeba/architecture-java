@@ -1,4 +1,4 @@
-﻿pipeline {
+pipeline {
     agent any
     environment {
         MAVEN_TOOL = 'Maven 3'
@@ -37,7 +37,7 @@
         stage('Docker Build') {
             steps {
                 echo "Construction de l'image Docker : ${IMAGE_NAME}:${IMAGE_TAG}"
-                sh "cd devops && echo 'Simulation: docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'"
+                sh "cd devops && echo Simulation: docker build"
             }
         }
         stage('Docker Push') {
