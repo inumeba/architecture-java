@@ -1,0 +1,6 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/cron/scrape/route": "/api/cron/scrape",
+  "/api/webhook/route": "/api/webhook",
+  "/page": "/"
+}
