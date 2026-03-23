@@ -39,7 +39,7 @@ pipeline {
             post {
                 always {
                     // Enregistre les résultats des tests JUnit (Fichiers XML) dans l'interface Jenkins
-                    // junit deactivated
+                    echo "junit deactivated"
                 }
             }
         }
