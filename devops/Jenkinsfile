@@ -1,4 +1,4 @@
-pipeline {
+﻿pipeline {
     agent any
     environment {
         MAVEN_TOOL = 'Maven 3'
@@ -27,7 +27,6 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 echo 'Simulation: Lance analyse SonarQube (Désactivé car nécessite config Jenkins UI)'
-                // sh 'cd devops && ./mvnw sonar:sonar -Dsonar.host.url=http://devops-sonarqube:9000'
             }
         }
         stage('Quality Gate') {
@@ -35,10 +34,10 @@ pipeline {
                 echo 'Simulation: Validation de la qualité du code (Quality Gate)'
             }
         }
-        stage('echo "Simulation: docker build"') {
+        stage('Docker Build') {
             steps {
                 echo "Construction de l'image Docker : ${IMAGE_NAME}:${IMAGE_TAG}"
-                sh "cd devops && echo "Simulation: docker build" -t ${IMAGE_NAME}:${IMAGE_TAG} ."
+                sh "cd devops && echo 'Simulation: docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'"
             }
         }
         stage('Docker Push') {
