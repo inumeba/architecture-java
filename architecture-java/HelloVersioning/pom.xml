@@ -6,7 +6,7 @@
     pour apprendre et pratiquer la stratégie de versioning Git Flow
     avec Semantic Versioning (SemVer).
 
-    Version actuelle : 1.0.0 (première release stable)
+    Version actuelle : 1.1.0 (ajout endpoint changelog)
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -25,7 +25,7 @@
     <!-- IDENTITÉ du projet -->
     <groupId>com.exemple</groupId>
     <artifactId>hello-versioning</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>Hello Versioning — Git Flow Demo</name>
     <description>Projet Spring Boot minimaliste pour apprendre Git Flow et le versioning SemVer</description>
 
