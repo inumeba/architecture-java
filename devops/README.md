@@ -1,4 +1,4 @@
-﻿# 🚀 Projet : Usine logicielle CI/CD (Spring Boot + Jenkins + Docker + Kubernetes)
+# 🚀 Projet : Usine logicielle CI/CD (Spring Boot + Jenkins + Docker + Kubernetes)
 
 Bienvenue dans ce projet de démonstration DevOps ! L'objectif est d'automatiser le cycle de vie d'une application Java (Spring Boot) depuis le code source jusqu'au déploiement.
 
