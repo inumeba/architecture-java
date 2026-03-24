@@ -1,10 +1,10 @@
-# 🚀 Projet : Usine logicielle CI/CD (Spring Boot + Jenkins + Docker + Kubernetes)
+﻿# 🚀 Projet : Usine logicielle CI/CD (Spring Boot + Jenkins + Docker + Kubernetes)
 
 Bienvenue dans ce projet de démonstration DevOps ! L'objectif est d'automatiser le cycle de vie d'une application Java (Spring Boot) depuis le code source jusqu'au déploiement.
 
 ## 🌟 Vue d'ensemble de l'architecture
 
-`mermaid
+``mermaid
 graph LR
     Dev[Développeur] -->|git push| Git[(Dépôt Git)]
     Git -->|Webhook| Jenkins((Jenkins CI/CD))
@@ -17,7 +17,7 @@ graph LR
     
     Docker -->|4. docker push| Registry[(Docker Registry)]
     Jenkins -->|5. kubectl apply| K8s{Cluster Kubernetes}
-`
+``
 
 ## 🛠️ Outils utilisés
 - **Java 17 & Spring Boot 3.2+** : Application backend avec une simple API REST /.
@@ -76,7 +76,7 @@ Lors de la configuration de ce pipeline, nous avons surmonté plusieurs défis t
    `
 
 4. **Encodage et piège du BOM (Byte Order Mark)**  
-   L'enregistrement et l'usage de commandes Set-Content dans Windows PowerShell inclut souvent par défaut un caractère encodé invisible (le BOM UTF-8) en tout premier. Le Moteur Groovy qui analyse le Jenkinsfile de façon brute n'a pas réussi à lire le mot-clé pipeline (NoSuchMethodError: ﻿pipeline). Résolu en forçant explicitement un encodage strict ASCII / ou utf-8 sans BOM pour le code source du pipeline.
+   L'enregistrement et l'usage de commandes Set-Content dans Windows PowerShell inclut souvent par défaut un caractère encodé invisible (le BOM UTF-8) en tout premier. Le Moteur Groovy qui analyse le Jenkinsfile de façon brute n'a pas réussi à lire le mot-clé pipeline (NoSuchMethodError: pipeline). Résolu en forçant explicitement un encodage strict ASCII / ou utf-8 sans BOM pour le code source du pipeline.
 
 5. **Accès au moteur Docker hôte (Docker Socket Binding)**  
    Pour que l'image Jenkins exécute en toute sécurité des commandes docker build (sans utiliser une complexe configuration "Docker-in-Docker"), il a été nécessaire de monter la socket de l'hôte dans les volumes du docker-compose.yml (- /var/run/docker.sock:/var/run/docker.sock) et de donner des droits admin à l'image (user: root).
