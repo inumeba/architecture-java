@@ -26,7 +26,7 @@ public class VersionControleur {
     @GetMapping("/")
     public Map<String, String> accueil() {
         return Map.of(
-            "message", "Hello Versioning ! Bienvenue sur le projet Git Flow Demo.",
+            "message", "Bienvenue sur Hello Versioning — Git Flow Demo",
             "version", appVersion
         );
     }

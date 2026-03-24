@@ -28,7 +28,7 @@ class VersionControleurTest {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.message").exists())
-                .andExpect(jsonPath("$.version").value("1.0.0"));
+                .andExpect(jsonPath("$.version").value("1.1.0"));
     }
 
     @Test
@@ -36,7 +36,7 @@ class VersionControleurTest {
         mockMvc.perform(get("/version"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.application").value("hello-versioning"))
-                .andExpect(jsonPath("$.version").value("1.0.0"))
+                .andExpect(jsonPath("$.version").value("1.1.0"))
                 .andExpect(jsonPath("$.java").exists())
                 .andExpect(jsonPath("$.timestamp").exists());
     }
