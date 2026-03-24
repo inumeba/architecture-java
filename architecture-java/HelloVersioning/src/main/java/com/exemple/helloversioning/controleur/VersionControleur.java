@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Map;
 
 /**
@@ -42,7 +43,7 @@ public class VersionControleur {
         return Map.of(
             "application", "hello-versioning",
             "version", appVersion,
-            "timestamp", LocalDateTime.now().toString(),
+            "timestamp", LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME),
             "java", System.getProperty("java.version")
         );
     }
