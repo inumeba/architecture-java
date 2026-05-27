@@ -1,0 +1,32 @@
+name: Supabase Keep-Alive
+
+# Ping l'app InvoiceSnap deux fois par semaine pour éviter la mise en pause
+# du projet Supabase (free tier — pause après 7 jours sans activité).
+# Schedule : chaque lundi et jeudi à 08h00 UTC.
+on:
+  schedule:
+    - cron: "0 8 * * 1" # Lundi 08:00 UTC
+    - cron: "0 8 * * 4" # Jeudi 08:00 UTC
+  workflow_dispatch: # Déclenchement manuel si besoin
+
+jobs:
+  keep-alive:
+    name: Ping Supabase via health endpoint
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Ping /api/health
+        run: |
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${{ secrets.HEALTH_CHECK_TOKEN }}" \
+            "https://invoicesnap-psi.vercel.app/api/health")
+
+          echo "HTTP status: $HTTP_STATUS"
+
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "::error::Health check échoué (status $HTTP_STATUS)"
+            exit 1
+          fi
+
+          echo "✓ Supabase project maintenu actif (status $HTTP_STATUS)"
