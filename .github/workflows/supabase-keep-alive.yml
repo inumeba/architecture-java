@@ -19,7 +19,6 @@ jobs:
       - name: Ping /api/health
         run: |
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            -H "Authorization: Bearer ${{ secrets.HEALTH_CHECK_TOKEN }}" \
             "https://invoicesnap-psi.vercel.app/api/health")
 
           echo "HTTP status: $HTTP_STATUS"
