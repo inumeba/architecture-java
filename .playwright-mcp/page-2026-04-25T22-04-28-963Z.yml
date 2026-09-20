@@ -1,0 +1,66 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e42] [cursor=pointer]:
+    - img [ref=e43]
+  - alert [ref=e46]
+  - generic [ref=e48]:
+    - banner [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - link "InvoiceSnap" [ref=e52] [cursor=pointer]:
+            - /url: /dashboard
+          - generic [ref=e53]: Admin
+        - navigation [ref=e54]:
+          - link "Clients" [ref=e55] [cursor=pointer]:
+            - /url: /dashboard/clients
+          - link "Profil" [ref=e56] [cursor=pointer]:
+            - /url: /dashboard/profile
+          - link "Admin" [ref=e57] [cursor=pointer]:
+            - /url: /dashboard/admin
+          - button "Déconnexion" [ref=e58] [cursor=pointer]
+    - main [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - paragraph [ref=e62]: Connecté avec
+          - paragraph [ref=e63]: abbache.mebarek@hotmail.fr
+        - generic [ref=e64]: Profil administrateur actif
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]: 💰
+          - paragraph [ref=e68]: CA total
+          - paragraph [ref=e69]: 8064,00 €
+        - generic [ref=e70]:
+          - generic [ref=e71]: ✅
+          - paragraph [ref=e72]: Payé
+          - paragraph [ref=e73]: 0,00 €
+        - generic [ref=e74]:
+          - generic [ref=e75]: 📤
+          - paragraph [ref=e76]: En attente
+          - paragraph [ref=e77]: "1"
+        - generic [ref=e78]:
+          - generic [ref=e79]: ⚠️
+          - paragraph [ref=e80]: En retard
+          - paragraph [ref=e81]: "0"
+      - generic [ref=e82]:
+        - heading "Mes factures" [level=2] [ref=e83]
+        - link "+ Nouvelle facture" [ref=e84] [cursor=pointer]:
+          - /url: /dashboard/new
+      - table [ref=e86]:
+        - rowgroup [ref=e87]:
+          - row "N° Client Date Montant Statut" [ref=e88]:
+            - columnheader "N°" [ref=e89]
+            - columnheader "Client" [ref=e90]
+            - columnheader "Date" [ref=e91]
+            - columnheader "Montant" [ref=e92]
+            - columnheader "Statut" [ref=e93]
+            - columnheader [ref=e94]
+        - rowgroup [ref=e95]:
+          - row "2026-0001 service comptable 30/04/2026 8064,00 € Envoyée Voir →" [ref=e96]:
+            - cell "2026-0001" [ref=e97]
+            - cell "service comptable" [ref=e98]
+            - cell "30/04/2026" [ref=e99]
+            - cell "8064,00 €" [ref=e100]
+            - cell "Envoyée" [ref=e101]:
+              - generic [ref=e102]: Envoyée
+            - cell "Voir →" [ref=e103]:
+              - link "Voir →" [ref=e104] [cursor=pointer]:
+                - /url: /invoice/43096f75-172e-41a3-8e44-ecc8e69b0591

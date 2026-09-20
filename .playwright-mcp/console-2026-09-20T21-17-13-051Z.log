@@ -1,0 +1,11 @@
+[     134ms] [WARNING] Autoblocking not enabled @ https://cs.iubenda.com/autoblocking/3979050.js:0
+[     195ms] Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at rD (https://invoicesnap.vercel.app/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_3T6xpdM3i54inBsJq4c1yxtkHZap:1:35062)
+    at https://invoicesnap.vercel.app/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_3T6xpdM3i54inBsJq4c1yxtkHZap:1:119651
+    at ix (https://invoicesnap.vercel.app/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_3T6xpdM3i54inBsJq4c1yxtkHZap:1:122955)
+    at ik (https://invoicesnap.vercel.app/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_3T6xpdM3i54inBsJq4c1yxtkHZap:1:114743)
+    at https://invoicesnap.vercel.app/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_3T6xpdM3i54inBsJq4c1yxtkHZap:1:110730
+    at iu (https://invoicesnap.vercel.app/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_3T6xpdM3i54inBsJq4c1yxtkHZap:1:110831)
+    at iX (https://invoicesnap.vercel.app/_next/static/chunks/4bd1b696-100b9d70ed4e49c1.js?dpl=dpl_3T6xpdM3i54inBsJq4c1yxtkHZap:1:132934)
+    at MessagePort.w (https://invoicesnap.vercel.app/_next/static/chunks/1255-2d7e5acab59107ef.js?dpl=dpl_3T6xpdM3i54inBsJq4c1yxtkHZap:1:64549)
+[     340ms] [INFO] Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner. @ https://invoicesnap.vercel.app/?nocache=1:0

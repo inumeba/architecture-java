@@ -1,0 +1,46 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e14]:
+      - generic [ref=e15]:
+        - link "InvoiceSnap" [ref=e16] [cursor=pointer]:
+          - /url: /dashboard
+        - link "← Retour" [ref=e17] [cursor=pointer]:
+          - /url: /dashboard
+    - main [ref=e18]:
+      - heading "Mon profil" [level=1] [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]: Email
+          - textbox [disabled] [ref=e23]: abbache.mebarek@gmail.com
+        - generic [ref=e24]:
+          - generic [ref=e25]: Nom complet
+          - textbox [ref=e26]: abbache.mebarek
+        - generic [ref=e27]:
+          - generic [ref=e28]: Société
+          - textbox [ref=e29]
+        - generic [ref=e30]:
+          - generic [ref=e31]: Adresse
+          - textbox [ref=e32]
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e35]: Téléphone
+            - textbox [ref=e36]
+          - generic [ref=e37]:
+            - generic [ref=e38]: SIRET
+            - textbox [ref=e39]
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]: RIB / Coordonnées bancaires
+            - button "Importer un PDF" [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+              - text: Importer un PDF
+          - 'textbox "IBAN : FR76 XXXX XXXX XXXX XXXX XXXX XXX BIC : XXXXXXXX Banque : Ma Banque" [ref=e46]':
+            - /placeholder: "IBAN : FR76 XXXX XXXX XXXX XXXX XXXX XXX\nBIC : XXXXXXXX\nBanque : Ma Banque"
+            - text: "RIB : Banque Indicatif N IBAN : FR57 3000 2086 0000 0082 4244 J62 RIB BIC : CONSTANT"
+        - generic [ref=e47]:
+          - generic [ref=e48]: URL du logo
+          - textbox "https://..." [ref=e49]
+        - button "Enregistrer" [ref=e50] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e9] [cursor=pointer]:
+    - img [ref=e10]
+  - alert [ref=e13]

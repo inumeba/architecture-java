@@ -3,3 +3,14 @@
 *.class
 *.jar
 node_modules/ 
+
+# Local secrets and personal data
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/id_rsa
+**/id_ed25519
+.vscode/mcp.json

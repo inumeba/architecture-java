@@ -1,0 +1,55 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e31]
+  - generic [ref=e32]:
+    - banner [ref=e33]:
+      - generic [ref=e34]:
+        - link "InvoiceSnap" [ref=e35] [cursor=pointer]:
+          - /url: /dashboard
+        - navigation [ref=e36]:
+          - link "Clients" [ref=e37] [cursor=pointer]:
+            - /url: /dashboard/clients
+          - link "Profil" [ref=e38] [cursor=pointer]:
+            - /url: /dashboard/profile
+          - button "Déconnexion" [ref=e39] [cursor=pointer]
+    - main [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: 💰
+          - paragraph [ref=e44]: CA total
+          - paragraph [ref=e45]: 120,00 €
+        - generic [ref=e46]:
+          - generic [ref=e47]: ✅
+          - paragraph [ref=e48]: Payé
+          - paragraph [ref=e49]: 0,00 €
+        - generic [ref=e50]:
+          - generic [ref=e51]: 📤
+          - paragraph [ref=e52]: En attente
+          - paragraph [ref=e53]: "0"
+        - generic [ref=e54]:
+          - generic [ref=e55]: ⚠️
+          - paragraph [ref=e56]: En retard
+          - paragraph [ref=e57]: "0"
+      - generic [ref=e58]:
+        - heading "Mes factures" [level=2] [ref=e59]
+        - link "+ Nouvelle facture" [ref=e60] [cursor=pointer]:
+          - /url: /dashboard/new
+      - table [ref=e62]:
+        - rowgroup [ref=e63]:
+          - row "N° Client Date Montant Statut" [ref=e64]:
+            - columnheader "N°" [ref=e65]
+            - columnheader "Client" [ref=e66]
+            - columnheader "Date" [ref=e67]
+            - columnheader "Montant" [ref=e68]
+            - columnheader "Statut" [ref=e69]
+            - columnheader [ref=e70]
+        - rowgroup [ref=e71]:
+          - row "2026-0001 — 25/04/2026 120,00 € Brouillon Voir →" [ref=e72]:
+            - cell "2026-0001" [ref=e73]
+            - cell "—" [ref=e74]
+            - cell "25/04/2026" [ref=e75]
+            - cell "120,00 €" [ref=e76]
+            - cell "Brouillon" [ref=e77]:
+              - generic [ref=e78]: Brouillon
+            - cell "Voir →" [ref=e79]:
+              - link "Voir →" [ref=e80] [cursor=pointer]:
+                - /url: /invoice/59953cd0-2e9b-415c-9001-8b25ca1c2cc4

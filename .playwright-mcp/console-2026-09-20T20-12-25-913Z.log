@@ -1,0 +1,5 @@
+[     240ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://invoicesnap-psi.vercel.app/api/expenses?month=2026-09:0
+[     243ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://invoicesnap-psi.vercel.app/api/fiscal?year=2026:0
+[     249ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://invoicesnap-psi.vercel.app/api/profile:0
+[     262ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://invoicesnap-psi.vercel.app/api/invoices:0
+[     393ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://invoicesnap-psi.vercel.app/:0

@@ -1,0 +1,55 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e9] [cursor=pointer]:
+    - img [ref=e10]
+  - alert [ref=e13]
+  - generic [ref=e14]:
+    - banner [ref=e15]:
+      - generic [ref=e16]:
+        - link "InvoiceSnap" [ref=e17] [cursor=pointer]:
+          - /url: /dashboard
+        - link "← Retour" [ref=e18] [cursor=pointer]:
+          - /url: /dashboard
+    - generic [ref=e19]:
+      - generic [ref=e20]: Brouillon
+      - link "✏️ Modifier le brouillon" [ref=e21] [cursor=pointer]:
+        - /url: /dashboard/new?edit=59953cd0-2e9b-415c-9001-8b25ca1c2cc4
+      - button "📤 Marquer envoyée" [ref=e22] [cursor=pointer]
+      - button "🖨 Imprimer / PDF" [ref=e23] [cursor=pointer]
+      - button "Supprimer" [ref=e24] [cursor=pointer]
+    - main [ref=e25]:
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - paragraph [ref=e29]: abbache.mebarek
+            - paragraph [ref=e30]: abbache.mebarek@gmail.com
+          - generic [ref=e31]:
+            - heading "FACTURE" [level=2] [ref=e32]
+            - paragraph [ref=e33]: 2026-0001
+            - paragraph [ref=e34]: Émise le 25 avril 2026
+            - paragraph [ref=e35]: "Échéance : 09 juin 2026"
+        - table [ref=e36]:
+          - rowgroup [ref=e37]:
+            - row "Description Qté Prix unit. Total" [ref=e38]:
+              - columnheader "Description" [ref=e39]
+              - columnheader "Qté" [ref=e40]
+              - columnheader "Prix unit." [ref=e41]
+              - columnheader "Total" [ref=e42]
+          - rowgroup [ref=e43]:
+            - row "Test impression 1 100,00 € 100,00 €" [ref=e44]:
+              - cell "Test impression" [ref=e45]
+              - cell "1" [ref=e46]
+              - cell "100,00 €" [ref=e47]
+              - cell "100,00 €" [ref=e48]
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Sous-total
+            - generic [ref=e53]: 100,00 €
+          - generic [ref=e54]:
+            - generic [ref=e55]: TVA (20%)
+            - generic [ref=e56]: 20,00 €
+          - generic [ref=e57]:
+            - generic [ref=e58]: Total
+            - generic [ref=e59]: 120,00 €
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Notes
+          - paragraph [ref=e62]: test print local

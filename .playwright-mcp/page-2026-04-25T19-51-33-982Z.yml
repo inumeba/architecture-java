@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: Factures pro en 1 minute
+      - heading "InvoiceSnap" [level=1] [ref=e5]
+      - paragraph [ref=e6]:
+        - text: Créez des factures professionnelles. Envoyez-les à vos clients. Suivez les paiements.
+        - strong [ref=e7]: Gratuit.
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: Votre email
+        - textbox "Votre email" [ref=e11]:
+          - /placeholder: vous@email.com
+      - button "Accéder directement →" [ref=e12] [cursor=pointer]
+      - paragraph [ref=e13]: Accès immédiat sans vérification par email.
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: ⚡
+        - heading "1 minute" [level=3] [ref=e17]
+        - paragraph [ref=e18]: Facture créée en un clic
+      - generic [ref=e19]:
+        - generic [ref=e20]: 📄
+        - heading "PDF pro" [level=3] [ref=e21]
+        - paragraph [ref=e22]: Design professionnel
+      - generic [ref=e23]:
+        - generic [ref=e24]: �
+        - heading "Partage" [level=3] [ref=e25]
+        - paragraph [ref=e26]: Lien direct au client
+      - generic [ref=e27]:
+        - generic [ref=e28]: 📊
+        - heading "Suivi" [level=3] [ref=e29]
+        - paragraph [ref=e30]: Payé ? En retard ?
+  - alert [ref=e31]

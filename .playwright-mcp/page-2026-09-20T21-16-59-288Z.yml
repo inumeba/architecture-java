@@ -1,0 +1,192 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link [ref=e4] [cursor=pointer]:
+      - /url: https://invoicebird.ai
+      - generic [ref=e5]:
+        - img "InvoiceBird Logo" [ref=e6]
+        - heading "InvoiceBird" [level=2] [ref=e7]
+    - navigation [ref=e8]:
+      - button "Toggle theme" [ref=e10] [cursor=pointer]
+      - button [ref=e12] [cursor=pointer]:
+        - link "Sign In" [ref=e13]:
+          - /url: /signIn
+      - button [ref=e14] [cursor=pointer]:
+        - link "Sign Up For Free" [ref=e15]:
+          - /url: /signUp
+  - generic [ref=e16]:
+    - generic [ref=e22]:
+      - heading "InvoiceBird" [level=1] [ref=e23]
+      - heading "Simple, Fast, Reliable Invoices" [level=2] [ref=e24]
+      - paragraph [ref=e25]: Automate recurring invoices, reminders, and payments - so you focus on growth.
+      - button [ref=e27] [cursor=pointer]:
+        - link "Get started for free now" [ref=e28]:
+          - /url: /signUp
+    - heading "OurSponsors" [level=2] [ref=e30]
+  - generic [ref=e33]:
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - heading "About Our Company" [level=2] [ref=e39]
+        - paragraph [ref=e40]: InvoiceBird is the effortless invoicing solution built for freelancers, small businesses, and agencies who want to get paid faster — without the headache. Create professional invoices in seconds, automate recurring billing, send payment reminders, and track cash flow in real time. All the tools you need to spend less time on paperwork and more time growing your business.
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - img "0K+" [ref=e46]:
+            - generic [ref=e47]: "0"
+            - generic [ref=e50]: K+
+          - paragraph [ref=e52]: Invoices Processed
+        - generic [ref=e53]:
+          - img "$0M+" [ref=e55]:
+            - generic [ref=e56]: $
+            - generic [ref=e58]: "0"
+            - generic [ref=e61]: M+
+          - paragraph [ref=e63]: Payments Tracked
+        - generic [ref=e64]:
+          - img "0K+" [ref=e66]:
+            - generic [ref=e67]: "0"
+            - generic [ref=e70]: K+
+          - paragraph [ref=e72]: Active Users
+        - generic [ref=e73]:
+          - img "0%" [ref=e75]:
+            - generic [ref=e76]: "0"
+            - generic [ref=e79]: "%"
+          - paragraph [ref=e81]: Invoice Delivery Success
+    - generic [ref=e82]:
+      - heading "How It Works Step-by-Step Guide" [level=2] [ref=e83]
+      - paragraph [ref=e84]: Follow four simple steps to automate your invoicing process, get paid faster, and gain actionable insights into your finances.
+      - generic [ref=e85]:
+        - generic [ref=e87]:
+          - generic [ref=e88]: Automated Invoice Parsing
+          - generic [ref=e93]: Connect your inbox once — InvoiceBird auto‑extracts invoice data so you never miss a payment.
+        - generic [ref=e95]:
+          - generic [ref=e96]: Detailed Reporting
+          - generic [ref=e99]: Generate customizable reports on revenue, expenses, and client payment history with a single click.
+        - generic [ref=e101]:
+          - generic [ref=e102]: Real‑Time Analytics
+          - generic [ref=e107]: Visualize cash flow, revenue trends, and outstanding invoices in interactive charts.
+        - generic [ref=e109]:
+          - generic [ref=e110]: Bulk Invoice Upload
+          - generic [ref=e115]: Import PDF or image invoices at once — InvoiceBird categorizes and stores them automatically.
+    - generic [ref=e118]:
+      - heading "Client-Centric Services" [level=2] [ref=e119]:
+        - generic [ref=e120]: Client-Centric
+        - text: Services
+      - paragraph [ref=e121]: Everything you need to manage invoices, get paid faster, and keep your finances crystal clear — all in one intuitive dashboard.
+      - generic [ref=e122]:
+        - generic [ref=e130]:
+          - generic [ref=e131]: Automated Email Parsing
+          - generic [ref=e132]: Connect your inbox once — InvoiceBird automatically extracts invoice data from incoming emails so you never miss a bill again.
+        - generic [ref=e140]:
+          - generic [ref=e141]: Instant Invoice Generation
+          - generic [ref=e142]: Create and send professional invoices in under 30 seconds using our customizable templates — no design skills required.
+        - generic [ref=e149]:
+          - generic [ref=e150]: Real‑Time Analytics
+          - generic [ref=e151]: Track revenue trends, outstanding balances, and payment history with interactive charts that give you actionable insights at a glance.
+        - generic [ref=e158]:
+          - generic [ref=e159]: Bulk Upload & Management
+          - generic [ref=e160]: Drag‑and‑drop multiple PDF, JPG, or another image formats invoices at once — organize, tag, and archive your records effortlessly.
+        - generic [ref=e168]:
+          - generic [ref=e169]: Automated Payment Reminders
+          - generic [ref=e170]: Set custom reminder schedules so clients pay on time — InvoiceBird sends follow‑ups automatically, saving you from manual chasing.
+    - generic [ref=e171]:
+      - heading "Discover Why People Love InvoiceBird" [level=2] [ref=e172]
+      - paragraph [ref=e173]: Join thousands of freelancers and small businesses who’ve streamlined billing, automated payments, and reclaimed hours every week — all with InvoiceBird.
+      - generic [ref=e174]:
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - generic [ref=e178]: S
+            - generic [ref=e180]:
+              - generic [ref=e181]: Samantha Lee
+              - generic [ref=e182]: "@samlee_design"
+          - generic [ref=e183]: InvoiceBird cut my invoicing time by 80%! I love how it auto‑imports invoices from my email and sends payment reminders so I never chase clients again.
+        - generic [ref=e185]:
+          - generic [ref=e186]:
+            - generic [ref=e187]: C
+            - generic [ref=e189]:
+              - generic [ref=e190]: Carlos Rivera
+              - generic [ref=e191]: "@carlosbiz"
+          - generic [ref=e192]: As a small agency owner, I needed something simple but powerful — InvoiceBird delivers. The analytics dashboard gives me clarity on cash flow at a glance.
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - generic [ref=e196]: P
+            - generic [ref=e198]:
+              - generic [ref=e199]: Priya Sharma
+              - generic [ref=e200]: "@priyacodes"
+          - generic [ref=e201]: The PDF uploader is a game‑changer for my legacy invoices. Setup was effortless, and support was super responsive when I had questions.
+        - generic [ref=e203]:
+          - generic [ref=e204]:
+            - generic [ref=e205]: M
+            - generic [ref=e207]:
+              - generic [ref=e208]: Marcus Chen
+              - generic [ref=e209]: "@marcus_finance"
+          - generic [ref=e210]: I love that InvoiceBird integrates with Stripe and PayPal — clients pay instantly from the invoice itself. Cash flow has never been smoother!
+        - generic [ref=e212]:
+          - generic [ref=e213]:
+            - generic [ref=e214]: A
+            - generic [ref=e216]:
+              - generic [ref=e217]: Aisha Bello
+              - generic [ref=e218]: "@aisha.freelance"
+          - generic [ref=e219]: Finally a tool that understands freelancers! Beautiful UI, super easy to customize invoice templates, and reliable email parsing every time.
+        - generic [ref=e221]:
+          - generic [ref=e222]:
+            - generic [ref=e223]: E
+            - generic [ref=e225]:
+              - generic [ref=e226]: Ethan Williams
+              - generic [ref=e227]: "@ethan_w"
+          - generic [ref=e228]: InvoiceBird’s team collaboration features are excellent — I can grant my accountant access without compromising security. Highly recommend!
+    - generic [ref=e229]:
+      - heading "Frequently Asked Questions" [level=2] [ref=e230]
+      - generic [ref=e231]:
+        - heading [level=3] [ref=e233]:
+          - button "Is InvoiceBird free to use?" [ref=e234]
+        - heading [level=3] [ref=e237]:
+          - button "How does InvoiceBird process invoices from my email?" [ref=e238]
+        - heading [level=3] [ref=e241]:
+          - button "Can I upload invoices manually?" [ref=e242]
+        - heading [level=3] [ref=e245]:
+          - button "What kind of analytics does InvoiceBird provide?" [ref=e246]
+        - heading [level=3] [ref=e249]:
+          - button "Is my data secure?" [ref=e250]
+        - heading [level=3] [ref=e253]:
+          - button "How do I invite teammates or accountants?" [ref=e254]
+        - heading [level=3] [ref=e257]:
+          - button "What payment methods are supported?" [ref=e258]
+        - heading [level=3] [ref=e261]:
+          - button "Can I customize invoice templates?" [ref=e262]
+      - heading [level=3] [ref=e264]:
+        - text: Still have questions?
+        - link "Contact Us" [ref=e265] [cursor=pointer]:
+          - /url: mailto:info@invoicebird.ai
+  - contentinfo [ref=e266]:
+    - generic [ref=e267]:
+      - generic [ref=e268]:
+        - generic [ref=e269]:
+          - link [ref=e270] [cursor=pointer]:
+            - /url: https://invoicebird.ai
+            - generic [ref=e271]:
+              - img "InvoiceBird Logo" [ref=e272]
+              - heading "InvoiceBird" [level=2] [ref=e273]
+          - heading "Your smart invoice solution" [level=2] [ref=e274]
+        - generic [ref=e275]:
+          - heading "Contacts" [level=3] [ref=e276]
+          - link "info@invoicebird.ai" [ref=e278] [cursor=pointer]:
+            - /url: mailto:info@invoicebird.ai
+        - generic [ref=e279]:
+          - heading "Social" [level=3] [ref=e280]
+          - link "Instagram" [ref=e282] [cursor=pointer]:
+            - /url: https://www.instagram.com/invoicebird.ai/
+          - link "X (ex. Twitter)" [ref=e284] [cursor=pointer]:
+            - /url: https://x.com/invoicebird.ai
+        - generic [ref=e285]:
+          - heading "Legal" [level=3] [ref=e286]
+          - link "Privacy Policy" [ref=e288] [cursor=pointer]:
+            - /url: /privacy-policy
+          - link "Terms & Conditions" [ref=e290] [cursor=pointer]:
+            - /url: https://www.iubenda.com/terms-and-conditions/83888158
+        - generic [ref=e291]:
+          - heading "Office" [level=3] [ref=e292]
+          - generic [ref=e293]: KMA Tech Holding Limited
+          - generic [ref=e294]: 20 Eastbourne Terrace
+          - generic [ref=e295]: London, W2 6LG
+      - heading [level=3] [ref=e297]:
+        - text: © 2025 Designed and developed by
+        - link "KMA Tech" [ref=e298] [cursor=pointer]:
+          - /url: https://github.com/KMA-Tech

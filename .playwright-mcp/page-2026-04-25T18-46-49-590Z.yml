@@ -1,0 +1,42 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e9] [cursor=pointer]:
+    - img [ref=e10]
+  - alert [ref=e13]
+  - generic [ref=e43]:
+    - banner [ref=e44]:
+      - generic [ref=e45]:
+        - link "InvoiceSnap" [ref=e46] [cursor=pointer]:
+          - /url: /dashboard
+        - navigation [ref=e47]:
+          - link "Clients" [ref=e48] [cursor=pointer]:
+            - /url: /dashboard/clients
+          - link "Profil" [ref=e49] [cursor=pointer]:
+            - /url: /dashboard/profile
+          - button "Déconnexion" [ref=e50] [cursor=pointer]
+    - main [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: 💰
+          - paragraph [ref=e55]: CA total
+          - paragraph [ref=e56]: 0,00 €
+        - generic [ref=e57]:
+          - generic [ref=e58]: ✅
+          - paragraph [ref=e59]: Payé
+          - paragraph [ref=e60]: 0,00 €
+        - generic [ref=e61]:
+          - generic [ref=e62]: 📤
+          - paragraph [ref=e63]: En attente
+          - paragraph [ref=e64]: "0"
+        - generic [ref=e65]:
+          - generic [ref=e66]: ⚠️
+          - paragraph [ref=e67]: En retard
+          - paragraph [ref=e68]: "0"
+      - generic [ref=e69]:
+        - heading "Mes factures" [level=2] [ref=e70]
+        - link "+ Nouvelle facture" [ref=e71] [cursor=pointer]:
+          - /url: /dashboard/new
+      - generic [ref=e72]:
+        - generic [ref=e73]: 📄
+        - paragraph [ref=e74]: Aucune facture pour le moment.
+        - link "Créer ma première facture" [ref=e75] [cursor=pointer]:
+          - /url: /dashboard/new

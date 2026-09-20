@@ -1,0 +1,34 @@
+- generic [active] [ref=f5e1]:
+  - generic [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - link [ref=f5e5] [cursor=pointer]:
+        - /url: https://invoicebird.ai
+        - generic [ref=f5e6]:
+          - img "InvoiceBird Logo" [ref=f5e7]
+          - heading "InvoiceBird" [level=2] [ref=f5e8]
+      - generic [ref=f5e11]:
+        - generic [ref=f5e12]:
+          - generic [ref=f5e13]:
+            - heading "Login to your account" [level=1] [ref=f5e14]
+            - paragraph [ref=f5e15]: Enter your email below to login to your account
+          - generic [ref=f5e16]:
+            - generic [ref=f5e17]:
+              - generic [ref=f5e18]: Email
+              - textbox "Email" [ref=f5e19]:
+                - /placeholder: m@example.com
+            - generic [ref=f5e20]:
+              - generic [ref=f5e21]:
+                - generic [ref=f5e22]: Password
+                - link "Forgot your password?" [ref=f5e23] [cursor=pointer]:
+                  - /url: /reset-password
+              - textbox "Password" [ref=f5e24]
+            - button "Login" [ref=f5e25] [cursor=pointer]
+            - generic [ref=f5e26]: Or continue with
+        - button "Login with Google" [ref=f5e27] [cursor=pointer]
+        - button "Login with Outlook" [ref=f5e28] [cursor=pointer]
+        - generic [ref=f5e29]:
+          - text: Don't have an account?
+          - link "Sign up" [ref=f5e30] [cursor=pointer]:
+            - /url: /signUp
+    - img "Auth background" [ref=f5e32]
+  - alert [ref=f5e33]

@@ -1,0 +1,78 @@
+# language=en prob=1.0000
+[    0.00 ->     4.08] GitHub Copilot now writes nearly half of all developer code worldwide.
+[    4.72 ->    11.04] 15 million developers use it every single day. But here's the thing. 90% of them are using it as
+[   11.04 ->    19.04] a fancy auto complete. Tab, tab, tab, that's it. They're leaving 80% of copilot's power completely
+[   19.04 ->    24.48] untouched. Today, I'm going to show you 10 tricks that most developers don't know about,
+[   24.48 ->    28.72] features that turn pilot from a suggestion engine into an autonomous coding agent.
+[   29.68 ->    35.12] Let me show you what most developers do with Copilot. They open their editor, start typing a function,
+[   35.12 ->    41.12] and wait for the gray ghost text to appear. If it looks right, they hit tab. If not, they keep typing.
+[   41.12 ->    46.64] That's the entire workflow. But in March 2026, Copilot got agent mode,
+[   46.64 ->    52.64] a GENTIC code review, MCP server support, custom agents, and an entirely new CLI.
+[   52.64 ->    58.24] The tool you installed six months ago, it's a completely different product now, and these 10 tricks
+[   58.24 ->    64.72] will prove it. Trick number one, slash commands. Instead of writing custom prompts every time,
+[   64.72 ->    70.88] Copilot has built in shortcuts that do common tasks instantly. Type slash explain on any function,
+[   70.88 ->    76.48] and Copilot breaks down exactly what it does, line by line. Slash fix finds and patches bugs in
+[   76.48 ->    82.88] your selected code. Slash tests generate a complete test suite. Slash dock writes documentation,
+[   82.96 ->    88.40] and slash new scaffolds an entirely new project. These aren't fancy prompts. Their purpose
+[   88.40 ->    94.64] built commands that Copilot has been specifically trained on. They work better and faster than typing
+[   94.64 ->   101.28] a manual prompt every single time. Trick number two, file references. This is the single biggest
+[  101.28 ->   106.72] context hack in Copilot. When you're chatting with Copilot, type hash tag file, and then the file name.
+[  107.44 ->   112.16] This tells Copilot to read that specific file before answering. So instead of saying,
+[  112.16 ->   117.60] look at my off module, you say hashtag file, off.ts and Copilot has the full context.
+[  118.16 ->   125.36] You can reference multiple files at once. Hashtag file schema.ts hashtag file routes.ts. Now,
+[  125.36 ->   131.52] Copilot understands your data model and your API layer simultaneously. This alone makes the chat
+[  131.52 ->   137.92] 10 times more accurate. Trick number three, custom instructions. This is the file that makes Copilot
+[  137.92 ->   144.72] actually understand your project. Create a file called dot get-up slash Copilot-instructions.md
+[  144.72 ->   151.20] in your repo route. Inside, write your coding standards. Things like, we use TypeScript Strict Mode.
+[  151.20 ->   156.48] We prefer functional components with hooks, error handling must use our custom result type,
+[  156.48 ->   162.72] never use any type. Once this file exists, every suggestion Copilot makes follows your rules,
+[  162.72 ->   167.68] and because it's committed to your repo, every teammate gets the same tune Copilot.
+[  167.68 ->   174.56] Think of it as claw.md, but for Copilot, one file, permanent improvement. Trick number four,
+[  174.56 ->   180.24] next edit suggestions. This feature predicts where you'll edit next and pre-fills the change.
+[  181.04 ->   186.72] You rename a variable in one place, and Copilot highlights every other location that needs updating
+[  186.80 ->   193.20] across multiple files. You change a function signature and Copilot suggests updating every color.
+[  193.76 ->   198.56] It's not just autocomplete anymore, it's understanding your intent and propagating changes.
+[  199.52 ->   204.24] Look for the blue sparkle icon in your editor. When you see it, hit tab and Copilot,
+[  204.24 ->   209.12] jumps you to the next edit. It's like having a pair programmer who reads your mind.
+[  209.76 ->   215.84] Trick number five, and this is the big one, Agent Mode. This went generally available in March
+[  215.92 ->   221.20] 2026, and it fundamentally changes how Copilot works. Instead of suggesting
+[  221.20 ->   226.80] code line by line, you describe a task in natural language. Copilot then creates a plan,
+[  226.80 ->   232.08] determines which files need changes, edits them, runs terminal commands, executes your tests,
+[  232.08 ->   238.48] and iterates on errors until the task is done. You say add user authentication with JDUT tokens,
+[  238.48 ->   244.72] and Copilot creates the middleware, updates the routes, adds the config, writes the tests, and runs them.
+[  245.36 ->   249.92] It's not autocomplete, it's an autonomous coding agent living inside your editor.
+[  250.56 ->   256.96] Trick number six, Agent Code Review. Copilot doesn't just write code anymore, it reviews it too.
+[  257.76 ->   261.68] When you open a pull request, Copilot gathers full project context,
+[  261.68 ->   267.60] analyzes every changed file, and suggests improvements. But here's the real trick, it can take its own
+[  267.60 ->   273.44] suggestions and turn them into fixed PRs automatically. So Copilot reviews your code, finds a
+[  273.44 ->   278.48] potential null pointer issue, and instead of just leaving a comment, it opens a new PR with the fix.
+[  279.12 ->   285.04] Code Review that actually fixes the problems it finds. That's a gentic. Trick number seven,
+[  285.68 ->   291.92] Agent Hooks. This is for developers who want Copilot to work with less friction. Hooks let you define
+[  291.92 ->   298.00] automatic behaviors that trigger during agent mode. You can set up auto-approved for MCP tool calls,
+[  298.00 ->   302.64] so Copilot doesn't pause to ask permission every time. You can create custom
+[  302.64 ->   308.08] reactions that run before Copilot starts, like pulling the latest changes or checking environment
+[  308.08 ->   315.52] variables, and post actions that run after, like formatting code or running lint. Hooks turn agent mode
+[  315.52 ->   322.80] from a conversational tool into a fully automated pipeline. Trick number eight, MCP server connections.
+[  323.04 ->   327.76] This is where Copilot breaks out of the editor. MCP, the model context protocol, let's
+[  327.76 ->   333.68] Copilot connect to external tools and data sources. Connect a database MCP server and Copilot
+[  333.68 ->   339.36] can query your production schema. Connect a Figma MCP server, and it can read your design tokens.
+[  340.00 ->   344.56] Connect a gera server, and it can read tickets and update them after implementation.
+[  345.28 ->   351.12] Copilot with MCP isn't just reading your code files, it's reading your entire development ecosystem,
+[  351.60 ->   357.76] and in JetBrains auto-approved for MCP is already in preview, meaning Copilot can use these tools
+[  357.76 ->   364.00] without asking you every single time. Trick number nine, GitHub Spark. This one is wild.
+[  364.88 ->   369.92] Describe an application in plain English, a habit tracker with street counts and a dark mode dashboard,
+[  369.92 ->   376.48] and Copilot generates the entire thing. Working code, live preview, instant iteration. You don't
+[  376.56 ->   382.40] open an IDE, you don't touch a terminal, you just talk to it and refine. It's available on ProPlus
+[  382.40 ->   387.68] and Enterprise plans, and it's GitHub's bet on the vibe coding future. For quick prototypes,
+[  387.68 ->   393.20] internal tools, and proof of concepts, Spark is genuinely faster than coding from scratch.
+[  393.92 ->   400.72] And Trick number 10, Copilot CLI Copilot isn't just in your editor anymore, it's in your terminal.
+[  400.80 ->   407.60] Copilot CLI went GA in early 2026 with two powerful modes. Plan mode analyzes your code base and
+[  407.60 ->   412.88] creates a step-by-step implementation plan before writing any code, and autopilot mode executes
+[  412.88 ->   417.92] that plan autonomously, reading files, running commands, editing code, and fixing errors without
+[  417.92 ->   424.96] manual intervention. It even has specialized agents. Explore for fast code base analysis and task for
+[  424.96 ->   431.12] running builds and tests. Terminal first developers, this one's for you. So there you have it.
+[  431.12 ->   437.52] 10 GitHub Copilot tricks that most developers are completely missing. Slash commands, file references,
+[  437.52 ->   443.12] custom instructions, next edit suggestions, agent mode, agent code review, agent hooks,
+[  443.12 ->   450.16] MCP servers, GitHub Spark, and Copilot CLI. Copilot in 2026 isn't an auto-complete tool.
+[  450.24 ->   454.88] It's an autonomous coding agent. If you want to see me go deeper on any of these, especially
+[  454.88 ->   461.04] agent mode versus cloud code, hit subscribe and drop a comment. I'll see you in the next one.

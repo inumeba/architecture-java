@@ -1,0 +1,19 @@
+# Sensitive files and local secrets
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/id_rsa
+**/id_ed25519
+**/.npmrc
+**/.yarnrc*
+
+# Workspace config that may contain tokens
+.vscode/mcp.json
+
+# Build and dependencies
+**/node_modules/**
+**/target/**
+**/out/**

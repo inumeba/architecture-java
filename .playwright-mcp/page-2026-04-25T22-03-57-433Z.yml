@@ -1,0 +1,42 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: Factures pro en 1 minute
+      - heading "InvoiceSnap" [level=1] [ref=e5]
+      - paragraph [ref=e6]:
+        - text: Créez des factures professionnelles. Envoyez-les à vos clients. Suivez les paiements.
+        - strong [ref=e7]: Gratuit.
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - button "Connexion" [ref=e10]
+        - button "Créer un compte" [ref=e11]
+      - generic [ref=e12]:
+        - generic [ref=e13]: Votre email
+        - textbox "Votre email" [ref=e14]:
+          - /placeholder: vous@email.com
+      - generic [ref=e15]:
+        - generic [ref=e16]: Mot de passe
+        - textbox "Mot de passe" [ref=e17]:
+          - /placeholder: Minimum 8 caractères
+      - button "Se connecter →" [ref=e18] [cursor=pointer]
+      - paragraph [ref=e19]: Accès contrôlé par email + mot de passe stockés en base.
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: ⚡
+        - heading "1 minute" [level=3] [ref=e23]
+        - paragraph [ref=e24]: Facture créée en un clic
+      - generic [ref=e25]:
+        - generic [ref=e26]: 📄
+        - heading "PDF pro" [level=3] [ref=e27]
+        - paragraph [ref=e28]: Design professionnel
+      - generic [ref=e29]:
+        - generic [ref=e30]: 🔗
+        - heading "Partage" [level=3] [ref=e31]
+        - paragraph [ref=e32]: Lien direct au client
+      - generic [ref=e33]:
+        - generic [ref=e34]: 📊
+        - heading "Suivi" [level=3] [ref=e35]
+        - paragraph [ref=e36]: Payé ? En retard ?
+  - button "Open Next.js Dev Tools" [ref=e42] [cursor=pointer]:
+    - img [ref=e43]
+  - alert [ref=e46]

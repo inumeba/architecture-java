@@ -1,0 +1,68 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e42] [cursor=pointer]:
+    - img [ref=e43]
+  - alert [ref=e46]
+  - generic [ref=e105]:
+    - banner [ref=e106]:
+      - generic [ref=e107]:
+        - link "InvoiceSnap" [ref=e108] [cursor=pointer]:
+          - /url: /dashboard
+        - link "← Retour" [ref=e109] [cursor=pointer]:
+          - /url: /dashboard
+    - generic [ref=e110]:
+      - generic [ref=e111]: Envoyée
+      - generic [ref=e112]:
+        - combobox [ref=e113]:
+          - option "Brouillon"
+          - option "Envoyée" [selected]
+          - option "Payée"
+          - option "En retard"
+        - button "Changer statut" [disabled] [ref=e114] [cursor=pointer]
+      - button "🖨 Imprimer / PDF" [ref=e115] [cursor=pointer]
+      - button "🔗 Partager" [ref=e116] [cursor=pointer]
+      - button "Supprimer" [ref=e117] [cursor=pointer]
+    - main [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - generic [ref=e121]:
+            - paragraph [ref=e122]: abbache mebarek
+            - paragraph [ref=e123]: MEBA TECH 60 RUE FRANCOIS IER 75005 PARIS
+            - paragraph [ref=e124]: "0623720228"
+            - paragraph [ref=e125]: "SIRET : 10070243000016"
+            - paragraph [ref=e126]: abbache.mebarek@hotmail.fr
+          - generic [ref=e127]:
+            - heading "FACTURE" [level=2] [ref=e128]
+            - paragraph [ref=e129]: 2026-0001
+            - paragraph [ref=e130]: Émise le 30 avril 2026
+            - paragraph [ref=e131]: "Échéance : 14 juin 2026"
+        - generic [ref=e132]:
+          - paragraph [ref=e133]: Facturé à
+          - paragraph [ref=e134]: service comptable
+          - paragraph [ref=e135]: We+
+          - paragraph [ref=e136]: plaine@we-plus.fr compta@we-plus.fr
+        - table [ref=e137]:
+          - rowgroup [ref=e138]:
+            - row "Description Qté Prix unit. Total" [ref=e139]:
+              - columnheader "Description" [ref=e140]
+              - columnheader "Qté" [ref=e141]
+              - columnheader "Prix unit." [ref=e142]
+              - columnheader "Total" [ref=e143]
+          - rowgroup [ref=e144]:
+            - row "Développeur Java Backend Senior CI/CD 16 420,00 € 6720,00 €" [ref=e145]:
+              - cell "Développeur Java Backend Senior CI/CD" [ref=e146]
+              - cell "16" [ref=e147]
+              - cell "420,00 €" [ref=e148]
+              - cell "6720,00 €" [ref=e149]
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - generic [ref=e153]: Sous-total
+            - generic [ref=e154]: 6720,00 €
+          - generic [ref=e155]:
+            - generic [ref=e156]: TVA (20%)
+            - generic [ref=e157]: 1344,00 €
+          - generic [ref=e158]:
+            - generic [ref=e159]: Total
+            - generic [ref=e160]: 8064,00 €
+        - generic [ref=e161]:
+          - paragraph [ref=e162]: Coordonnées bancaires (RIB)
+          - paragraph [ref=e163]: "RIB : 30002 08600 0000824244J 62 IBAN : FR57 3000 2086 0000 0082 4244 J62 BIC : CRLYFRPP"
