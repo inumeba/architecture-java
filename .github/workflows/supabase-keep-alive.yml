@@ -1,31 +1,46 @@
 name: Supabase Keep-Alive
 
-# Ping l'app InvoiceSnap deux fois par semaine pour éviter la mise en pause
-# du projet Supabase (free tier — pause après 7 jours sans activité).
-# Schedule : chaque lundi et jeudi à 08h00 UTC.
+# Requête réelle sur la base tous les 3 jours (free tier : pause après 7 jours d'inactivité).
 on:
   schedule:
-    - cron: "0 8 * * 1" # Lundi 08:00 UTC
-    - cron: "0 8 * * 4" # Jeudi 08:00 UTC
-  workflow_dispatch: # Déclenchement manuel si besoin
+    - cron: "0 8 */3 * *"
+  workflow_dispatch:
 
 jobs:
   keep-alive:
-    name: Ping Supabase via health endpoint
+    name: Ping Supabase (REST + Auth)
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
     steps:
-      - name: Ping /api/health
+      - name: Ping Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY || secrets.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || secrets.SUPABASE_ANON_KEY }}
         run: |
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            "https://invoicesnap-psi.vercel.app/api/health")
-
-          echo "HTTP status: $HTTP_STATUS"
-
-          if [ "$HTTP_STATUS" != "200" ]; then
-            echo "::error::Health check échoué (status $HTTP_STATUS)"
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_KEY" ]; then
+            echo "::error::Secrets manquants: SUPABASE_URL et SUPABASE_PUBLISHABLE_KEY (ou SUPABASE_ANON_KEY)"
             exit 1
           fi
 
-          echo "✓ Supabase project maintenu actif (status $HTTP_STATUS)"
+          BASE_URL="${SUPABASE_URL%/}"
+
+          # Lecture sur la table users : génère une vraie activité Postgres.
+          REST_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --retry 3 --retry-delay 5 \
+            -H "apikey: $SUPABASE_KEY" \
+            -H "Authorization: Bearer $SUPABASE_KEY" \
+            "$BASE_URL/rest/v1/users?select=id&limit=1")
+          echo "REST status: $REST_STATUS"
+
+          AUTH_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --retry 3 --retry-delay 5 \
+            -H "apikey: $SUPABASE_KEY" \
+            "$BASE_URL/auth/v1/health")
+          echo "Auth status: $AUTH_STATUS"
+
+          # 401/403 = projet actif mais RLS/clé restrictive ; l'activité est tout de même comptée.
+          case "$REST_STATUS" in
+            200|401|403) ;;
+            *) echo "::error::Supabase injoignable (REST $REST_STATUS), projet peut-être en pause"; exit 1 ;;
+          esac
+
+          echo "Supabase actif"
